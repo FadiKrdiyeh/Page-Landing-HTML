@@ -1,0 +1,224 @@
+.our-works {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 2px solid #eee;
+  .our-works-title {
+    @extend %title;
+    margin-bottom: 100px;
+  }
+  .our-works-container {
+    .our-works-nav {
+      margin-top: 50px;
+      display: flex;
+      .np-chevron-nav {
+        @extend %flex;
+        width: 100px;
+        max-height: 100px;
+        background-color: #111;
+        color: $mainFontColorForBlack;
+        cursor: pointer;
+        background-color: $mainFontColorForBlack;
+        color: $mainColorBlack;
+        border: 2px solid #111;
+        @include transition(0.3s, all);
+        &:hover {
+          background-color: #999;
+        }
+        &.prev-chevron-nav {
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          margin-left: 5px;
+        }
+        &.next-chevron-nav {
+          margin-right: 5px;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+      }
+      .nav-tabs {
+        contain: content;
+        overflow: hidden;
+        overflow-x: auto;
+        margin-bottom: 50px;
+        max-height: 100px;
+        &::-webkit-scrollbar {
+          background-color: inherit;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba($mainColorGold, 0.5);
+        }
+        .inside-nav-list {
+          // padding: 5px 10px;
+          display: flex;
+          white-space: nowrap;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .nav-link {
+          padding: 10px;
+          margin: 10px;
+          border-radius: 5px;
+          font-size: 18px;
+          background-color: $mainFontColorForBlack;
+          color: $mainColorBlack;
+          border: 2px solid #111;
+          @include transition(0.3s, all);
+          &:hover {
+            background-color: #999;
+          }
+          &.active {
+            background-color: $mainColorGold;
+            border-radius: 10px;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba($mainColorGold, 1);
+          }
+        }
+      }
+    }
+    .tab-content {
+      .tab-pane {
+        .nav-content-title {
+          font-size: 30px;
+          margin-bottom: 50px;
+          color: $mainFontColorForBlack;
+          @extend %text-shadow-w;
+        }
+        .nav-content-images {
+          .imgs-items-group {
+            // margin-bottom: 50px;
+            // margin: 20px 1% 50px;
+            position: relative;
+            padding: 0;
+            .imgs-item {
+              position: relative;
+              margin: 10px;
+              .imgs {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                position: relative;
+              }
+              .image-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                @include transition(0.5s, all);
+                border-radius: 10px;
+                &:hover {
+                  bottom: 100%;
+                  height: 0;
+                }
+              }
+              &:hover .image-overlay {
+                bottom: 100%;
+                height: 0;
+              }
+            }
+          }
+        }
+        .our-work-btn {
+          position: relative;
+          width: 175px;
+          height: 50px;
+          margin: 20px;
+          .custom-btn-item {
+            background: rgba(0, 0, 0, 0.01);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            @extend %text-shadow-w;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @extend %flex;
+            border-radius: 30px;
+            z-index: 1;
+            font-weight: 400;
+            letter-spacing: 1px;
+            overflow: hidden;
+            transition: 0.3s;
+            backdrop-filter: blur(15px);
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 50%;
+              height: 100%;
+              transform: skewX(45deg) translateX(0);
+              transition: 0.5s;
+              background: linear-gradient(
+                to left,
+                rgba(255, 255, 255, 0.15),
+                transparent
+              );
+            }
+          }
+          &:hover {
+            .custom-btn-item {
+              letter-spacing: 3px;
+              color: $mainColorBlack;
+              &::before {
+                transform: skewX(45deg) translateX(200%);
+              }
+            }
+            &::before {
+              bottom: 0;
+            }
+            &::after {
+              top: 0;
+            }
+            &::before,
+            &::after {
+              height: 50%;
+              width: 80%;
+              border-radius: 30px;
+              transition-delay: 0.3s;
+              background: $mainColorGold;
+              box-shadow: 0 0 5px $mainColorGold, 0 0 15px $mainColorGold,
+                0 0 30px $mainColorGold, 0 0 60px $mainColorGold;
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -5px;
+            width: 30px;
+            height: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+            transition-delay: 0s;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -5px;
+            width: 30px;
+            height: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+            transition-delay: 0s;
+          }
+          &::before,
+          &::after {
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgb(124, 124, 124), 0 0 15px rgb(124, 124, 124),
+              0 0 30px rgb(124, 124, 124), 0 0 60px rgb(124, 124, 124);
+          }
+        }
+      }
+    }
+  }
+}

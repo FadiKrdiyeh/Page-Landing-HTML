@@ -1,0 +1,28 @@
+%title {
+  color: $mainFontColorForBlack;
+  font-size: 50px;
+  @extend %text-shadow-w;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (max-width: 991px) {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 35px;
+  }
+}
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%text-shadow-w {
+  text-shadow: 0 0 10px #eee;
+}
+%text-shadow-g {
+  text-shadow: 0 0 10px $mainColorGold;
+}
+%text-shadow-b {
+  text-shadow: 0 0 10px #111;
+}

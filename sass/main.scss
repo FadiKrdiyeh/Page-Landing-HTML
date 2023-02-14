@@ -1,0 +1,18 @@
+@import "sass-utils/variable";
+@import "sass-utils/helpers";
+@import "sass-utils/mixins";
+@import "sass-utils/functions";
+
+@import "layouts/global";
+@import "layouts/header";
+
+@import "partitions/home";
+@import "partitions/our_services";
+@import "partitions/our_works";
+@import "partitions/our_clients";
+@import "partitions/contact_us";
+@import "partitions/about_us";
+@import "partitions/why_choose_us";
+
+@import "layouts/footer";
+@import "sass-utils/media";

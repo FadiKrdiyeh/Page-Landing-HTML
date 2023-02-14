@@ -1,0 +1,180 @@
+/***** Start Header Part *****/
+header {
+  .navbar {
+    @media (max-width: 991px) {
+      padding: 0;
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        @media (max-width: 991px) {
+          padding: 10px 60px;
+        }
+        .nav-item {
+          .nav-link {
+            @media (min-width: 992px) and (max-width: 1199px) {
+              padding: 0;
+            }
+          }
+        }
+      }
+      .navbar-text {
+        @media (max-width: 991px) {
+          padding: 10px 60px;
+        }
+        .navbar-text-item {
+          @media (max-width: 991px) {
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+/***** End Header Part *****/
+
+/***** Start Home Part *****/
+.home {
+  .main-title {
+    @media (max-width: 767px) {
+      font-size: 28px;
+    }
+  }
+  .home-buttons {
+    &.first-btn {
+      @media (max-width: 575px) {
+        margin-top: 50px;
+      }
+    }
+    @media (max-width: 575px) {
+      text-align: center !important;
+    }
+    .btn-custom {
+      @media (max-width: 575px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+/***** End Home Part *****/
+
+/***** Start About Us Part *****/
+.about-us {
+  .about-us-description {
+    @media (max-width: 575px) {
+      font-size: 17px;
+      padding: 20px;
+    }
+  }
+}
+/***** End About Us Part *****/
+
+/***** Start Our Services Part *****/
+.our-services {
+  .our-services-description {
+    .our-services-sub-description {
+      @media (max-width: 575px) {
+        font-size: 16px;
+        padding: 20px;
+        margin: 30px 10px 10px 10px;
+      }
+    }
+  }
+}
+/***** End Our Services Part *****/
+
+/***** Start Our Works Part *****/
+// No Code At This Moment
+/***** End Our Works Part *****/
+
+/***** Start Why Choose US Part *****/
+// No Code At This Moment
+/***** End Why Choose US Part *****/
+
+/***** Start Our Clients Part *****/
+// No Code At This Moment
+/***** End Our Clients Part *****/
+
+/***** Start Contact Us Part *****/
+// No Code At This Moment
+/***** End Contact Us Part *****/
+
+/***** Start Footer Part *****/
+.footer {
+  .right-top {
+    @media (max-width: 767px) {
+      border-left: none;
+    }
+    .footer-logo {
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 200px;
+        height: 120px;
+      }
+    }
+    .footer-number {
+      @media (min-width: 768px) and (max-width: 991px) {
+        font-size: 19px;
+      }
+    }
+  }
+  .left-top {
+    .footer-left-titles {
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .copy {
+    .left-bottom {
+      .footer-separetor {
+        @media (max-width: 767px) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+/***** End Footer Part *****/
+
+@media (max-width: 575px) {
+  // Extra Small Screen Only
+}
+
+/////////////////////////////////
+@media (min-width: 576px) and (max-width: 767px) {
+  // Small Screen Only
+}
+@media (min-width: 576px) {
+  // Small Screen And Above
+}
+
+/////////////////////////////////
+
+@media (min-width: 768px) and (max-width: 991px) {
+  // Medium Screen Only
+}
+@media (min-width: 768px) {
+  // Medium Screen And Above
+}
+
+/////////////////////////////////
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  // Large Screen Only
+}
+@media (min-width: 992px) {
+  // Large Screen And Above
+}
+
+/////////////////////////////////
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  // Extra Large Screen Only
+}
+@media (min-width: 1200px) {
+  // Extra Large Screen And Above
+}
+
+/////////////////////////////////
+@media (min-width: 1400px) {
+  // xxl Screen And Above
+}

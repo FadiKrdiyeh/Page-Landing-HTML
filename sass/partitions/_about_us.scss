@@ -1,0 +1,42 @@
+.about-us {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  @extend %flex;
+  background: linear-gradient(to bottom, $mainColorBlack, rgba(#dff1ff, 0.5));
+  overflow: hidden;
+  z-index: -1;
+  .about-us-title {
+    @extend %title;
+  }
+  .about-us-description {
+    color: rgba(238, 238, 238, 0.699);
+    margin-bottom: 100px;
+    font-size: 20px;
+    line-height: 2.3;
+  }
+  .color {
+    position: absolute;
+    filter: blur(150px);
+    &:nth-child(3) {
+      top: -350px;
+      background-color: rgba($mainColorGold, 0.1);
+      width: 600px;
+      height: 600px;
+    }
+    &:nth-child(4) {
+      bottom: -150px;
+      left: 100px;
+      background-color: rgba(#fffd87, 0.3);
+      width: 500px;
+      height: 500px;
+    }
+    &:nth-child(5) {
+      bottom: -50px;
+      right: 0;
+      background-color: rgba(#00d2ff, 0.3);
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
